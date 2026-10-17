@@ -1,0 +1,128 @@
+/* General styles for the paint website */
+
+html {
+    background-color: #cce089;
+    margin: 5px;
+}
+
+
+/* Header styles */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Company logo container styles */
+
+.company-logo-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 10%;
+}
+
+.company-logo-container img {
+    width: 50px;
+}
+
+/* Header Nav styles */
+
+.nav-menu {
+    width: 50%;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    color: red;
+}
+
+/* Contact link styles */
+
+.contact-link {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+}
+
+.contact-link img {
+    width: 100px;
+}
+
+/* Main content styles */
+
+/* Home page */
+
+.home-container {
+    text-align: center;
+}
+
+.home-container img {
+    max-width: 80%;
+}
+
+/* Products page */
+
+.product-nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.product-nav {
+    width: 50%;
+}
+
+.product-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.product-nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.product-nav ul li a:hover {
+    color: blue;
+}
+
+/* Selected Nav Items */
+
+.nav-menu ul li, .product-nav ul li {
+    position: relative;
+}
+
+.selected::before {
+    content: "•";
+    position: absolute;
+    left: -10px;
+    margin-right: 4px;
+}
+
+.products-intro {
+    text-align: center;
+}
+
+/* Footer styles */
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+}
