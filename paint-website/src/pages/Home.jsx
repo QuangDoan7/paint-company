@@ -6,13 +6,11 @@ import '../styles/general.css'
 function Home() {
     return (
         <>
-            <Header />
             <div className="home-container">
                 <h1>Kính chào quý khách</h1>
                 <p>Khám phá các loại sơn và dịch vụ của chúng tôi.</p>
                 <img src={welcomeImage} alt="Welcome" />
             </div>
-            <Footer />
         </>
     )
 }

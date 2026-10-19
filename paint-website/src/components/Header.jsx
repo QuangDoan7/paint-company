@@ -16,7 +16,7 @@ function Header() {
             </div>
             <nav className="nav-menu">
                 <ul>
-                    <li className={selectedNav === "/products" ? "selected" : ""}>
+                    <li className={selectedNav === "/products" || selectedNav === "/products/paint1" || selectedNav === "/products/paint2" || selectedNav === "/products/paint3" ? "selected" : ""}>
                         <Link to="/products">Sản Phẩm</Link>
                     </li>
                     <li className={selectedNav === "/services" ? "selected" : ""}>
@@ -31,7 +31,9 @@ function Header() {
                 </ul>
             </nav>
             <div className="contact-link">
-                <img src={contactUs} alt="Contact Us" />
+                <Link to="/contact">
+                    <img src={contactUs} alt="Contact Us" />
+                </Link>
             </div>
         </div>
     )

@@ -1,17 +1,19 @@
-import Header from '../components/Header.jsx'
-import Footer from '../components/Footer.jsx'
 import '../styles/general.css'
     
-function About() {
+function Contact() {
     return (
         <>
-            <Header />
-            <div className="about-container">
-                <h1>Alo chúng tôi để biết thêm</h1>
+            <div className="contact-container">
+                <h1>Thông tin chi tiết về công ty</h1>
+                <div>
+                    <h2>Tên: Công ty TNHH ... </h2>
+                    <h4>Địa chỉ: 123 Đường ABC, Quận XYZ, Thành phố </h4>
+                    <h4>Email: contact@company.com</h4>
+                    <h4>Điện thoại: 0123-456-789</h4>
+                </div>
             </div>
-            <Footer />
         </>
     )
 }
     
-export default About
+export default Contact
