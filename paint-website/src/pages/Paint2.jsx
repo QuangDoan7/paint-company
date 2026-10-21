@@ -1,39 +1,39 @@
 import ProductsNav from '../components/ProductsNav.jsx'
 import '../styles/general.css'
 
-import PaintPic from '../assets/img/company-logo.png'
+import Nippon from '../assets/img/paint2/nippon.png'
 
-function Paint2() {
+function Paint2({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile }) {
     return (
         <>
-            <ProductsNav />
+            <ProductsNav 
+                isMobileMenuOpen={isMobileMenuOpen}
+                setIsMobileMenuOpen={setIsMobileMenuOpen}
+                isMobile={isMobile}
+            />
+
             <div className="paint-list-section">
-                <h3>Đây là danh sách sơn 2</h3>
+                <h1 className="gradient-text">Nippon Paint</h1>
                 <div className="paint-list-container">
                     <div className="paint-content">
-                        <h4>Tên: Đây là sơn A</h4>
-                        <p>Mô tả: Mô tả về sơn A</p>
-                        <img src={PaintPic} alt="Sơn A" />
+                        <h4>Nippon WeatherGard</h4>
+                        <p>Sơn ngoại thất bảo vệ bề mặt tường.</p>
+                        <img src={Nippon} alt="Sơn A" />
                     </div>
                     <div className="paint-content">
-                        <h4>Tên: Đây là sơn A</h4>
-                        <p>Mô tả: Mô tả về sơn A</p>
-                        <img src={PaintPic} alt="Sơn A" />
+                        <h4>Nippon Odour-less Spot-less</h4>
+                        <p>Sơn nội thất nhẹ mùi, chống bám bẩn.</p>
+                        <img src={Nippon} alt="Sơn A" />
                     </div>
                     <div className="paint-content">
-                        <h4>Tên: Đây là sơn A</h4>
-                        <p>Mô tả: Mô tả về sơn A</p>
-                        <img src={PaintPic} alt="Sơn A" />
+                        <h4>Nippon Matex</h4>
+                        <p>Sơn nội thất kinh tế, dễ thi công.</p>
+                        <img src={Nippon} alt="Sơn A" />
                     </div>
                     <div className="paint-content">
-                        <h4>Tên: Đây là sơn A</h4>
-                        <p>Mô tả: Mô tả về sơn A</p>
-                        <img src={PaintPic} alt="Sơn A" />
-                    </div>
-                    <div className="paint-content">
-                        <h4>Tên: Đây là sơn A</h4>
-                        <p>Mô tả: Mô tả về sơn A</p>
-                        <img src={PaintPic} alt="Sơn A" />
+                        <h4>Nippon WP 200</h4>
+                        <p>Sơn chống thấm bảo vệ công trình.</p>
+                        <img src={Nippon} alt="Sơn A" />
                     </div>
                 </div>
             </div>

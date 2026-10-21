@@ -1,14 +1,12 @@
-import Header from '../components/Header.jsx'
-import Footer from '../components/Footer.jsx'
-import welcomeImage from '../assets/img/welcome-image.png'
+import welcomeImage from '../assets/img/welcome.png'
 import '../styles/general.css'
     
 function Home() {
     return (
         <>
             <div className="home-container">
-                <h1>Kính chào quý khách</h1>
-                <p>Khám phá các loại sơn và dịch vụ của chúng tôi.</p>
+                <h1 className="gradient-text">Mang sắc màu đến với ngôi nhà thân yêu của bạn!</h1>
+                <h3>Khám phá các sản phẩm sơn chất lượng và giải pháp phù hợp cho ngôi nhà, công trình và không gian của bạn.</h3>
                 <img src={welcomeImage} alt="Welcome" />
             </div>
         </>
