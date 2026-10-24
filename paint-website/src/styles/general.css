@@ -456,6 +456,8 @@ html {
 
 .news-item-container {
     margin: 10px;
+    max-width: 900px;
+    margin: 10px auto;
 }
 
 .news-item {
