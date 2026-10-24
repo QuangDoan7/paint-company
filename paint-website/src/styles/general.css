@@ -11,7 +11,6 @@ html {
     flex-direction: column;
 }
 
-
 /* Header styles */
 .header-container {
     display: flex;
@@ -61,18 +60,24 @@ html {
 }
 
 .nav-menu li {
+    font-size: 1.3em;
     transition: transform 0.1s ease;
 }
 
 .nav-menu li:hover {
     font-weight: bold;
-    transform: scale(1.2, 1.2);
+    color: blue;
+    transform: scale(1.1, 1.1);
     transition: transform 0.1s ease;
 }
 
 .nav-menu a, .mobile-nav.open a {
     color: black;
     text-decoration: none;
+}
+
+.nav-menu a:hover, .mobile-nav.open a:hover {
+    color: blue;
 }
 
 /* Mobile navigation styles */
@@ -103,7 +108,7 @@ html {
     }
 
     .mobile-menu-button:hover {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.1, 1.1);
         transition: transform 0.1s ease;
     }
 
@@ -138,7 +143,8 @@ html {
     }
     .mobile-nav.open li:hover {
         font-weight: bold;
-        transform: scale(1.2, 1.2) translate(-5px, 0px);
+        color: blue;
+        transform: scale(1.1, 1.1) translate(-5px, 0px);
         transition: transform 0.1s ease;
     }
 
@@ -213,19 +219,27 @@ html {
 }
 
 .product-nav li {
+    color: black;
+    font-size: 1.1em;
     transition: transform 0.1s ease;
 }
 
 .product-nav li:hover {
+    color: blue;
     font-weight: bold;
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
     transition: transform 0.1s ease;
 }
 
-.product-nav ul li a {
-    color: rgb(0, 0, 0);
+.product-nav a {
+    color: black;
     text-decoration: none;
 }
+
+.product-nav a:hover {
+    color: blue;
+}
+
 
 /* Mobile product nav styles */
 
@@ -263,6 +277,7 @@ html {
     }
 
     .mobile-product-nav.open li {
+        color: black;
         list-style: none;
         text-align: right;
         margin: 5px 0;
@@ -270,6 +285,7 @@ html {
     }
 
     .mobile-product-nav.open li:hover {
+        color: blue;
         font-weight: bold;
         transform: scale(1.2, 1.2) translate(-5px, 0px);
         transition: 0.1s ease;
@@ -278,6 +294,10 @@ html {
     .mobile-product-nav.open a {
         text-decoration: none;
         color: black;
+    }
+
+    .mobile-product-nav.open a:hover {
+        color: blue;
     }
 }
 
@@ -331,7 +351,7 @@ html {
     .selected::before {
         content: "•";
         position: absolute;
-        left: -10px;
+        left: -15px;
         margin-right: 4px;
     }
 }
@@ -388,23 +408,16 @@ html {
     text-align: center;
 }
 
-.news-container h1 {
-    text-align: center;
-}
-
 .news-item-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 10px;
 }
 
 .news-item {
+    box-sizing: border-box;
     border: 2px solid black;
     border-radius: 10px;
-    margin: 5px 15px;
     padding: 10px;
-    min-width: 350px;
-    max-width: 600px;
+    width: 100%;
 }
 
 .news-item h3 {
@@ -490,6 +503,10 @@ html {
 .footer-container {
     text-align: center;
     margin-top: auto;
+}
+
+.footer-container p {
+    font-weight: bold;
 }
 
 /* Some Common Special Styles*/

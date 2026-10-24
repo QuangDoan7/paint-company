@@ -4,7 +4,7 @@ function About() {
     return (
         <>
             <div className="about-us-container">
-                <h1>Alo chúng tôi để biết thêm.</h1>
+                <h1 className="gradient-text">Alo chúng tôi để biết thêm.</h1>
             </div>
         </>
     )

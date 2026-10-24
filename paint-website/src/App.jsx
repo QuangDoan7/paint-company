@@ -1,6 +1,9 @@
 import './styles/general.css'
-import { Route, Routes } from 'react-router'
+
+import { Route, Routes, useLocation } from 'react-router'
 import { useState, useEffect } from 'react'
+import {motion, AnimatePresence} from 'motion/react'
+
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Paint1 from './pages/Paint1.jsx'
@@ -26,6 +29,8 @@ function App() {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+    const location = useLocation();
+
     return (
         <>
             <Header 
@@ -34,62 +39,74 @@ function App() {
                 isMobile={isMobile}
             />
 
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/products" element={
-                        <Products
-                            isMobileMenuOpen={isMobileMenuOpen}
-                            setIsMobileMenuOpen={setIsMobileMenuOpen}
-                            isMobile={isMobile}
-                        />}
-                    />
-                    <Route path="/services" element={
-                        <Services 
-                            isMobileMenuOpen={isMobileMenuOpen}
-                            setIsMobileMenuOpen={setIsMobileMenuOpen}
-                            isMobile={isMobile}
-                        />}
-                    />
-                    <Route path="/news" element={<News 
-                            isMobileMenuOpen={isMobileMenuOpen}
-                            setIsMobileMenuOpen={setIsMobileMenuOpen}
-                            isMobile={isMobile}
-                        />}
-                    />
-                    <Route path="/about" element={<About 
-                            isMobileMenuOpen={isMobileMenuOpen}
-                            setIsMobileMenuOpen={setIsMobileMenuOpen}
-                            isMobile={isMobile}
-                        />} />
-                    <Route path="/contact" element={<Contact 
-                            isMobileMenuOpen={isMobileMenuOpen}
-                            setIsMobileMenuOpen={setIsMobileMenuOpen}
-                            isMobile={isMobile}
-                        />} />
-                    <Route path="/products/Paint1" element={
-                        <Paint1
-                            isMobileMenuOpen={isMobileMenuOpen}
-                            setIsMobileMenuOpen={setIsMobileMenuOpen}
-                            isMobile={isMobile}
-                        />}
-                    />
-                    <Route path="/products/Paint2" element={
-                        <Paint2
-                            isMobileMenuOpen={isMobileMenuOpen}
-                            setIsMobileMenuOpen={setIsMobileMenuOpen}
-                            isMobile={isMobile}
-                        />}
-                    />
-                    <Route path="/products/Paint3" element={
-                        <Paint3
-                            isMobileMenuOpen={isMobileMenuOpen}
-                            setIsMobileMenuOpen={setIsMobileMenuOpen}
-                            isMobile={isMobile}
-                        />}
-                    />
-                </Routes>
-            </main>
+                <main>
+                    <AnimatePresence
+                        mode="wait"
+                    >
+                        <motion.div
+                            key={location.pathname}
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.75, ease: "easeInOut" }}
+                        > 
+                            <Routes location={location}>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/products" element={
+                                    <Products
+                                        isMobileMenuOpen={isMobileMenuOpen}
+                                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                                        isMobile={isMobile}
+                                    />}
+                                />
+                                <Route path="/services" element={
+                                    <Services 
+                                        isMobileMenuOpen={isMobileMenuOpen}
+                                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                                        isMobile={isMobile}
+                                    />}
+                                />
+                                <Route path="/news" element={<News 
+                                        isMobileMenuOpen={isMobileMenuOpen}
+                                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                                        isMobile={isMobile}
+                                    />}
+                                />
+                                <Route path="/about" element={<About 
+                                        isMobileMenuOpen={isMobileMenuOpen}
+                                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                                        isMobile={isMobile}
+                                    />} />
+                                <Route path="/contact" element={<Contact 
+                                        isMobileMenuOpen={isMobileMenuOpen}
+                                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                                        isMobile={isMobile}
+                                    />} />
+                                <Route path="/products/Paint1" element={
+                                    <Paint1
+                                        isMobileMenuOpen={isMobileMenuOpen}
+                                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                                        isMobile={isMobile}
+                                    />}
+                                />
+                                <Route path="/products/Paint2" element={
+                                    <Paint2
+                                        isMobileMenuOpen={isMobileMenuOpen}
+                                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                                        isMobile={isMobile}
+                                    />}
+                                />
+                                <Route path="/products/Paint3" element={
+                                    <Paint3
+                                        isMobileMenuOpen={isMobileMenuOpen}
+                                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                                        isMobile={isMobile}
+                                    />}
+                                />
+                            </Routes>
+                        </motion.div>
+                    </AnimatePresence>
+                </main>
             
             <Footer />
         </>
