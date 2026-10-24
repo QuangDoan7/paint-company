@@ -1,17 +1,10 @@
-import ProductsNav from '../components/ProductsNav.jsx'
 import '../styles/general.css'
 
 import Nippon from '../assets/img/paint2/nippon.png'
 
-function Paint2({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile }) {
+function Paint2() {
     return (
         <>
-            <ProductsNav 
-                isMobileMenuOpen={isMobileMenuOpen}
-                setIsMobileMenuOpen={setIsMobileMenuOpen}
-                isMobile={isMobile}
-            />
-
             <div className="paint-list-section">
                 <h1 className="gradient-text">Nippon Paint</h1>
                 <div className="paint-list-container">

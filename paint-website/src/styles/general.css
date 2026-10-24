@@ -113,35 +113,50 @@ html {
     }
 
     .mobile-nav {
-        display: none;
+        position: absolute;
+        top: 35px;
+        right: 0;
+        z-index: 10;
+
+        width: 100px;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px black;
+
+        /* Closed state */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.3s ease-in-out,
+            transform 0.3s ease-in-out,
+            visibility 0.3s;
     }
 
     .mobile-nav.open {
-        display: block;
-        position: absolute;
-        top: 30px;
-        right: 0;
-        background-color: white;
-        border: 1px solid  black;
-        border-radius: 10px;
-        padding: 10px;
-        box-shadow: 5px 5px 15px black;
-        z-index: 10;
-        width: 100px;
+        /* Open state */
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
     }
 
-    .mobile-nav.open ul {
+    .mobile-nav ul {
         padding: 0;
         margin: 0;
     }
 
-    .mobile-nav.open li {
+    .mobile-nav li {
         list-style: none;
         text-align: right;
         margin: 5px 0;
         transition: transform 0.1s ease;
     }
-    .mobile-nav.open li:hover {
+    .mobile-nav li:hover {
         font-weight: bold;
         color: blue;
         transform: scale(1.1, 1.1) translate(-5px, 0px);
@@ -149,7 +164,7 @@ html {
     }
 
 
-    .mobile-nav.open a {
+    .mobile-nav a {
         text-decoration: none;
         color: black;
     }
@@ -244,39 +259,70 @@ html {
 /* Mobile product nav styles */
 
 @media screen and (max-width: 684px) {
-    .mobile-product-nav, .mobile-product-nav-arrow {
-        display: none;
-    }
-
-    .mobile-product-nav-arrow.open {
-        font-weight: bold;
-        display: block;
+    .mobile-product-nav-arrow {
         position: absolute;
+        font-weight: bold;
         top: 205px;
         right: 45px;
         z-index: 10;
+
+        /* Closed state */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-30px);
+
+        transition:
+            opacity 0.3s ease-in-out,
+            transform 0.3s ease-in-out,
+            visibility 0.3s;
     }
 
-    .mobile-product-nav.open {
-        display: block;
+    .mobile-product-nav-arrow.open {
+        /* Open state */
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .mobile-product-nav {
         position: absolute;
         top: 250px;
         right: 12px;
+        z-index: 10;
+
+        width: 100px;
+        padding: 10px;
         background-color: white;
         border: 1px solid black;
         border-radius: 10px;
-        padding: 10px;
         box-shadow: 5px 5px 15px black;
-        z-index: 10;
-        width: 100px;
+
+        /* Closed state */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-40px);
+
+        transition:
+            opacity 0.3s ease-in-out,
+            transform 0.3s ease-in-out,
+            visibility 0.3s;
     }
 
-    .mobile-product-nav.open ul {
+    .mobile-product-nav.open {
+        /* Open state */
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .mobile-product-nav ul {
         padding: 0;
         margin: 0;
     }
 
-    .mobile-product-nav.open li {
+    .mobile-product-nav li {
         color: black;
         list-style: none;
         text-align: right;
@@ -284,19 +330,19 @@ html {
         transition: 0.1s ease;
     }
 
-    .mobile-product-nav.open li:hover {
+    .mobile-product-nav li:hover {
         color: blue;
         font-weight: bold;
         transform: scale(1.2, 1.2) translate(-5px, 0px);
         transition: 0.1s ease;
     }
 
-    .mobile-product-nav.open a {
+    .mobile-product-nav a {
         text-decoration: none;
         color: black;
     }
 
-    .mobile-product-nav.open a:hover {
+    .mobile-product-nav a:hover {
         color: blue;
     }
 }

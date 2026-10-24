@@ -1,17 +1,10 @@
-import ProductsNav from '../components/ProductsNav.jsx'
 import '../styles/general.css'
 
 import Dulux from '../assets/img/paint1/dulux.png'
 
-function Paint1({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile }) {
+function Paint1() {
     return (
         <>
-            <ProductsNav 
-                isMobileMenuOpen={isMobileMenuOpen}
-                setIsMobileMenuOpen={setIsMobileMenuOpen}
-                isMobile={isMobile}
-            />
-
             <div className="paint-list-section">
                 <h1 className="gradient-text">Dulux</h1>
                 <div className="paint-list-container">

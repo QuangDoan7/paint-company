@@ -1,17 +1,10 @@
-import ProductsNav from '../components/ProductsNav.jsx'
 import '../styles/general.css'
 
 import Jotun from '../assets/img/paint3/jotun.png'
 
-function Paint3({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile }) {
+function Paint3() {
     return (
         <>
-            <ProductsNav 
-                isMobileMenuOpen={isMobileMenuOpen}
-                setIsMobileMenuOpen={setIsMobileMenuOpen}
-                isMobile={isMobile}
-            />  
-
             <div className="paint-list-section">
                 <h1 className="gradient-text">Jotun</h1>
                 <div className="paint-list-container">
